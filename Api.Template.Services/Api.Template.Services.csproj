@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Api.Template.Tests" />
+		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Mapster" Version="7.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Api.Exceptions\Api.Exceptions.csproj" />
+	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
+	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
+	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
+	</ItemGroup>
+
+</Project>

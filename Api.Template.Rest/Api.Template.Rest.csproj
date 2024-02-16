@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>bin\Api.Template.Rest.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="bin\Api.Template.Rest.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\Api.Controllers\Api.Controllers.csproj" />
+	  <ProjectReference Include="..\Api.Cors\Api.Cors.csproj" />
+	  <ProjectReference Include="..\Api.Filters\Api.Filters.csproj" />
+	  <ProjectReference Include="..\Api.FluentValidation\Api.FluentValidation.csproj" />
+	  <ProjectReference Include="..\Api.Logging\Api.Logging.csproj" />
+	  <ProjectReference Include="..\Api.Swagger\Api.Swagger.csproj" />
+	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
+	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
+	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
+	  <ProjectReference Include="..\Api.Template.Services\Api.Template.Services.csproj" />
+	</ItemGroup>
+
+
+
+</Project>
