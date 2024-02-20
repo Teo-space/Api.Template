@@ -9,7 +9,7 @@ namespace Api.Template.Tests.Template.Services.BasketSeviceTests;
 
 public class GetBasketByClientTest
 {
-    SampleDbContext dbContext;
+    private SampleDbContext dbContext;
     IBasketSevice basketSevice;
 
     [SetUp]
@@ -32,6 +32,11 @@ public class GetBasketByClientTest
         }
         basketSevice = new BasketSevice(dbContext);
     }
+    [TearDown] public void TearDown()
+    {
+        dbContext.Dispose();
+    }
+
 
     Guid ClientId = Guid.NewGuid();
 
