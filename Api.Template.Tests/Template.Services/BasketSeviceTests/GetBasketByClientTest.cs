@@ -15,8 +15,14 @@ public class GetBasketByClientTest
     [SetUp]
     public void Setup()
     {
-        var Options = new DbContextOptionsBuilder<SampleDbContext>().UseInMemoryDatabase($"DbContext_{Guid.NewGuid()}").Options;
+        var Options = new DbContextOptionsBuilder<SampleDbContext>()
+            //.UseSqlServer($@"Data Source=(LocalDb)\MSSQLLocalDB; Database=DbContext_{Guid.NewGuid()}").Options;
+            .UseSqlServer($@"Data Source=(LocalDb)\MSSQLLocalDB; Initial Catalog=DbContext_{Guid.NewGuid()}").Options;
+
         dbContext = new SampleDbContext(Options);
+        dbContext.Database.EnsureDeleted();
+        dbContext.Database.EnsureCreated();
+
         {
             var basketPosition = new BasketPosition()
             {
@@ -32,8 +38,11 @@ public class GetBasketByClientTest
         }
         basketSevice = new BasketSevice(dbContext);
     }
-    [TearDown] public void TearDown()
+
+    [TearDown] 
+    public void TearDown()
     {
+        dbContext.Database.EnsureDeleted();
         dbContext.Dispose();
     }
 
