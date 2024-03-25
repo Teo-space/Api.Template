@@ -20,7 +20,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Api.Exceptions\Api.Exceptions.csproj" />
 	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
 	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
 	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />

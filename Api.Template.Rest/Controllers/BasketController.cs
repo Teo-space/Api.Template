@@ -9,7 +9,7 @@ namespace Api.Template.Rest.Controllers;
 /// <summary>
 /// Корзина покупателя
 /// </summary>
-[Route($"{Prefix}/[controller]")]//Override route if needed
+[Route($"{Prefix}/[controller]")]
 public class BasketController(ILogger<BasketController> logger, IBasketSevice basketSevice) 
     : ApiBaseController
 {

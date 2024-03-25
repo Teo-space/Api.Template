@@ -18,14 +18,21 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Api.Controllers" Version="1.0.0" />
+		<PackageReference Include="Api.Cors" Version="1.0.0" />
+		<PackageReference Include="Api.Exceptions" Version="1.0.0" />
+		<PackageReference Include="Api.Filters" Version="1.0.0" />
+		<PackageReference Include="Api.FluentValidation" Version="1.0.0" />
+		<PackageReference Include="Api.Http.Logging" Version="1.0.0" />
+		<PackageReference Include="Api.Logging" Version="1.0.0" />
+		<PackageReference Include="Api.Result" Version="1.0.0" />
+		<PackageReference Include="Api.Swagger" Version="1.0.0" />
+
+	</ItemGroup>
 	
 	<ItemGroup>
-	  <ProjectReference Include="..\Api.Controllers\Api.Controllers.csproj" />
-	  <ProjectReference Include="..\Api.Cors\Api.Cors.csproj" />
-	  <ProjectReference Include="..\Api.Filters\Api.Filters.csproj" />
-	  <ProjectReference Include="..\Api.FluentValidation\Api.FluentValidation.csproj" />
-	  <ProjectReference Include="..\Api.Logging\Api.Logging.csproj" />
-	  <ProjectReference Include="..\Api.Swagger\Api.Swagger.csproj" />
 	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
 	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
 	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />

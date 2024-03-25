@@ -1,4 +1,3 @@
-global using static Route;
 using Api.Controllers;
 using Api.Filters.Filters;
 using Api.Swagger;
