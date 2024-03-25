@@ -16,12 +16,10 @@ public class GetBasketByClientTest
     public void Setup()
     {
         var Options = new DbContextOptionsBuilder<SampleDbContext>()
-            //.UseSqlServer($@"Data Source=(LocalDb)\MSSQLLocalDB; Database=DbContext_{Guid.NewGuid()}").Options;
-            .UseSqlServer($@"Data Source=(LocalDb)\MSSQLLocalDB; Initial Catalog=DbContext_{Guid.NewGuid()}").Options;
+            .UseSqlite("DataSource=file::memory:?cache=shared").Options;
+            //.UseSqlite("DataSource=file.db").Options;
 
         dbContext = new SampleDbContext(Options);
-        dbContext.Database.EnsureDeleted();
-        dbContext.Database.EnsureCreated();
 
         {
             var basketPosition = new BasketPosition()
