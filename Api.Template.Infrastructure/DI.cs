@@ -1,4 +1,5 @@
 ﻿using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
+using Api.Template.Interfaces.DbContexts;
 
 namespace Api.Template.Infrastructure;
 
@@ -8,6 +9,9 @@ public static class DI
     {
         services.AddDbContext<SampleDbContext>(options => options
         .UseSqlServer(configuration.GetConnectionString(DbConnectionNames.Connection)));
+
+        services.AddScoped<ISampleDbContext, SampleDbContext>();
+
 
 
     }

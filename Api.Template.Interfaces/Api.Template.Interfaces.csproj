@@ -3,26 +3,22 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
+		<Nullable>disable</Nullable>
 	</PropertyGroup>
-
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
-
 	<ItemGroup>
-		<InternalsVisibleTo Include="Api.Template.Tests" />
-		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Mapster" Version="7.4.0" />
-	</ItemGroup>
-
 	<ItemGroup>
 	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
-	  <ProjectReference Include="..\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
 	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
 	</ItemGroup>
-
+	<ItemGroup>
+	  <Folder Include="Repositories\" />
+	  <Folder Include="IntegrationServices\" />
+	  <Folder Include="Params\" />
+	</ItemGroup>
+	
 </Project>

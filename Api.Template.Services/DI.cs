@@ -1,7 +1,6 @@
 ﻿namespace Api.Template.Services;
 
-using Api.Template.Services.Interfaces;
-using Api.Template.Services.Services;
+using Api.Template.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
 
 

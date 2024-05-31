@@ -1,12 +1,12 @@
-﻿using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
+﻿using Api.Template.Interfaces.DbContexts;
+using Api.Template.Interfaces.Services;
 using Api.Template.Models.Output;
-using Api.Template.Services.Interfaces;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 
-namespace Api.Template.Services.Services;
+namespace Api.Template.Services;
 
-internal class BasketSevice(SampleDbContext dbContext) : IBasketSevice
+internal class BasketSevice(ISampleDbContext dbContext) : IBasketSevice
 {
     public async Task<BasketModel> GetBasketByClient(Guid clientId)
     {

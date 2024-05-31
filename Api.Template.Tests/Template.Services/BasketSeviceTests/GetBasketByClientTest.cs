@@ -1,7 +1,7 @@
 ﻿using Api.Template.Domain.Basket;
 using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
-using Api.Template.Services.Interfaces;
-using Api.Template.Services.Services;
+using Api.Template.Interfaces.Services;
+using Api.Template.Services;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 

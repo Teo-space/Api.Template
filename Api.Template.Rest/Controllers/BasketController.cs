@@ -1,7 +1,7 @@
 using Api.Controllers;
+using Api.Template.Interfaces.Services;
 using Api.Template.Models.Input;
 using Api.Template.Models.Output;
-using Api.Template.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Template.Rest.Controllers;

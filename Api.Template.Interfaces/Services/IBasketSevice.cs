@@ -1,6 +1,6 @@
 ﻿using Api.Template.Models.Output;
 
-namespace Api.Template.Services.Interfaces;
+namespace Api.Template.Interfaces.Services;
 
 /// <summary>
 /// Корзина

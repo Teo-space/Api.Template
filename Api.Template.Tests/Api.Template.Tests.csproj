@@ -40,6 +40,8 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
 	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
+	  <ProjectReference Include="..\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
+	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
 	  <ProjectReference Include="..\Api.Template.Services\Api.Template.Services.csproj" />
 	</ItemGroup>
 
