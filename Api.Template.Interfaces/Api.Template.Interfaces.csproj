@@ -16,9 +16,7 @@
 	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Repositories\" />
-	  <Folder Include="IntegrationServices\" />
-	  <Folder Include="Params\" />
+	  <Folder Include="ServicesExternal\" />
 	</ItemGroup>
 	
 </Project>
