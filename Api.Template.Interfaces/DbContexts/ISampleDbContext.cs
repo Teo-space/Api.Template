@@ -1,4 +1,4 @@
-﻿using Api.Template.Domain.Basket;
+﻿using Api.Template.Domain.Models.Basket;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Template.Interfaces.DbContexts;

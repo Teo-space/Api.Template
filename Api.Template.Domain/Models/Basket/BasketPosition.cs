@@ -1,8 +1,8 @@
-﻿namespace Api.Template.Domain.Basket;
+﻿namespace Api.Template.Domain.Models.Basket;
 
 
-[Table("BASKET_POSITION"), 
-    PrimaryKey(nameof(ClientId), nameof(ProductVariantId)), 
+[Table("BASKET_POSITION"),
+    PrimaryKey(nameof(ClientId), nameof(ProductVariantId)),
     Index(nameof(ClientId))]
 public class BasketPosition
 {
