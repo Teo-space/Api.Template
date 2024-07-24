@@ -1,6 +1,4 @@
-using Api.Controllers;
 using Api.Filters.Filters;
-using Api.Swagger;
 using Api.Template.Infrastructure;
 using Api.Template.Services;
 
