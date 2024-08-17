@@ -7,20 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Template.Rest.Controllers;
 
 /// <summary>
-/// Корзина покупателя
+/// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 [Route($"{Prefix}/[controller]")]
 public class BasketController(ILogger<BasketController> logger, IBasketSevice basketSevice) 
     : ApiBaseController
 {
     /// <summary>
-    /// получить корзину клиента
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     [HttpGet]
     [Produces(typeof(BasketModel))]
     public async Task<IActionResult> GetBasketByClient([FromQuery] GetBasketPositionsInput input)
     {
-        var result = await basketSevice.GetBasketByClient(input.СlientId);
+        var result = await basketSevice.GetBasketByClient(input.ClientId);
         return Ok(result);
     }
 }
