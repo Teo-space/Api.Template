@@ -36,13 +36,15 @@
 		</PackageReference>
 	</ItemGroup>
 
-
 	<ItemGroup>
-	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
-	  <ProjectReference Include="..\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
-	  <ProjectReference Include="..\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
-	  <ProjectReference Include="..\Api.Template.Models\Api.Template.Models.csproj" />
-	  <ProjectReference Include="..\Api.Template.Services\Api.Template.Services.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Domain\Api.Template.Domain.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Models\Api.Template.Models.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Services\Api.Template.Services.csproj" />
+	  <ProjectReference Include="..\..\Infrastructure\Api.Template.Infrastructure\Api.Template.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\Presentation\Api.Template.Rest\Api.Template.Rest.csproj" />
 	</ItemGroup>
+
+
 
 </Project>

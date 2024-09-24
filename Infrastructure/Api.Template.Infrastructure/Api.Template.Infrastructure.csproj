@@ -27,9 +27,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />
-	  <ProjectReference Include="..\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Domain\Api.Template.Domain.csproj" />
+	  <ProjectReference Include="..\..\Core\Api.Template.Interfaces\Api.Template.Interfaces.csproj" />
 	</ItemGroup>
+
 
 
 </Project>
