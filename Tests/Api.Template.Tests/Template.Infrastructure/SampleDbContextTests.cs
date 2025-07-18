@@ -16,7 +16,7 @@ internal class SampleDbContextTests
     {
         var Options = new DbContextOptionsBuilder<SampleDbContext>()
             .UseSqlite("DataSource=file::memory:?cache=shared").Options;
-            //.UseSqlite("DataSource=file.db").Options;
+        //.UseSqlite("DataSource=file.db").Options;
 
         dbContext = new SampleDbContext(Options);
         InitData();
