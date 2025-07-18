@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.Template.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Template.Models.Input.GetBasketPositionsInput">
+            <summary>
+            Вх. модель для позиций корзины покупателя
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Input.GetBasketPositionsInput.ClientId">
+            <summary>
+            ID клиента
+            </summary>
+        </member>
+        <member name="T:Api.Template.Models.Output.Basket.BasketModel">
+            <summary>
+            Корзина
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketModel.Positions">
+            <summary>
+            Позиции
+            </summary>
+        </member>
+        <member name="T:Api.Template.Models.Output.Basket.BasketPositionModel">
+            <summary>
+            Позиция
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.ClientId">
+            <summary>
+            ID покупателя
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.ProductTypeId">
+            <summary>
+            Ид. типа продукта
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.ProductId">
+            <summary>
+            Ид. продукта
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.ProductVariantId">
+            <summary>
+            Ид. варианта продукта
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.ProductVariantName">
+            <summary>
+            наименование
+            </summary>
+        </member>
+        <member name="P:Api.Template.Models.Output.Basket.BasketPositionModel.Quanity">
+            <summary>
+            количество
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,30 +5,24 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<InvariantGlobalization>true</InvariantGlobalization>
+		
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<DocumentationFile>bin\Api.Template.Rest.xml</DocumentationFile>
+		<DocumentationFile>Api.Template.Rest.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="bin\Api.Template.Rest.xml">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Api.Controllers" Version="8.0.0" />
+		<PackageReference Include="Results" Version="8.0.*" />
+		<PackageReference Include="Api.Logging" Version="8.0.3" />
+		<PackageReference Include="Api.Logging.IncomingRequests.LogTo.Console" Version="8.*" />
+		
 		<PackageReference Include="Api.Cors" Version="8.0.0" />
+		<PackageReference Include="Api.Controllers" Version="8.0.0" />
+
 		<PackageReference Include="Api.Exceptions" Version="8.0.0" />
 		<PackageReference Include="Api.Filters" Version="8.0.0" />
 		<PackageReference Include="Api.FluentValidation" Version="8.0.0" />
-		<PackageReference Include="Api.Http.Logging" Version="8.0.0" />
-		<PackageReference Include="Api.Logging" Version="8.0.0" />
-		<PackageReference Include="Api.Result" Version="8.0.0" />
-		<PackageReference Include="Api.Swagger" Version="8.0.0" />
+
+		<PackageReference Include="Api.Swagger" Version="8.*" />
 
 	</ItemGroup>
 

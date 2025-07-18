@@ -1,7 +1,7 @@
 ﻿using Api.Template.Domain.Models.Basket;
 using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
 using Api.Template.Interfaces.Services;
-using Api.Template.Services;
+using Api.Template.Services.Implementation;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +17,7 @@ public class GetBasketByClientTest
     {
         var Options = new DbContextOptionsBuilder<SampleDbContext>()
             .UseSqlite("DataSource=file::memory:?cache=shared").Options;
-            //.UseSqlite("DataSource=file.db").Options;
+        //.UseSqlite("DataSource=file.db").Options;
 
         dbContext = new SampleDbContext(Options);
 
@@ -37,7 +37,7 @@ public class GetBasketByClientTest
         basketSevice = new BasketSevice(dbContext);
     }
 
-    [TearDown] 
+    [TearDown]
     public void TearDown()
     {
         dbContext.Database.EnsureDeleted();

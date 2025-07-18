@@ -1,9 +1,9 @@
-﻿namespace Api.Template.Models.Output;
+﻿namespace Api.Template.Models.Output.Basket;
 
 /// <summary>
 /// Позиция
 /// </summary>
-public class BasketPositionModel
+public sealed record BasketPositionModel
 {
     /// <summary>
     /// ID покупателя

@@ -9,7 +9,7 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Api.Template.Domain\Api.Template.Domain.csproj" />

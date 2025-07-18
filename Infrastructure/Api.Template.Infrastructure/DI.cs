@@ -1,16 +1,17 @@
 ﻿using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
 using Api.Template.Interfaces.DbContexts;
+using Microsoft.Extensions.Hosting;
 
 namespace Api.Template.Infrastructure;
 
 public static class DI
 {
-    public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static void AddInfrastructure(this IHostApplicationBuilder builder)
     {
-        services.AddDbContext<SampleDbContext>(options => options
-        .UseSqlServer(configuration.GetConnectionString(DbConnectionNames.Connection)));
+        builder.Services.AddDbContext<SampleDbContext>(options => options
+            .UseSqlServer(builder.Configuration.GetConnectionString(DbConnectionNames.Connection)));
 
-        services.AddScoped<ISampleDbContext, SampleDbContext>();
+        builder.Services.AddScoped<ISampleDbContext, SampleDbContext>();
 
 
 

@@ -3,7 +3,7 @@
 /// <summary>
 /// Вх. модель для позиций корзины покупателя
 /// </summary>
-public class GetBasketPositionsInput
+public sealed record GetBasketPositionsInput
 {
     /// <summary>
     /// ID клиента

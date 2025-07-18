@@ -2,27 +2,29 @@ using Api.Filters.Filters;
 using Api.Template.Infrastructure;
 using Api.Template.Services;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
 string ReleaseCorsPolicy = "ReleaseCorsPolicy";
+
 {
-    //builder.Services.AddControllers();
-    builder.Services.AddControllersWithFilters(typeof(HttpExceptionFilter));
     builder.Services.AddAnyCors(ReleaseCorsPolicy);
-    builder.Logging.AddSerilogLogging(builder.Configuration);
-    builder.Services.AddMemoryCache();
+    builder.Services.AddControllersWithFilters(typeof(HttpExceptionFilter));
+
+    builder.AddSerilogLogging("Api.Template");
+
     builder.Services.AddFluentValidationWithValidators();
     builder.Services.AddModelsValidation();
 
-    var AppBasePath = builder.Configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
-    AppBasePath += Path.DirectorySeparatorChar + "bin" + Path.DirectorySeparatorChar;
+    string appBasePath = builder.Configuration.GetValue<string>(WebHostDefaults.ContentRootKey)
+        ?? throw new Exception("appBasePath is null");
 
     builder.Services.AddDefaultSwagger("Api.Template",
-        Path.Combine(AppBasePath, /*AppContext.BaseDirectory,*/ $"Api.Template.Rest.xml"));
+        Path.Combine(appBasePath, $"Api.Template.Rest.xml"),
+        Path.Combine(appBasePath, $"Api.Template.Models.xml"));
 }
 {
-    builder.Services.AddInfrastructure(builder.Configuration);
-    builder.Services.AddServices(builder.Configuration);
+    builder.AddInfrastructure();
+    builder.AddServices();
 }
 var app = builder.Build();
 {

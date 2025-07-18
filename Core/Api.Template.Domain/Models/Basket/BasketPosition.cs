@@ -4,7 +4,7 @@
 [Table("BASKET_POSITION"),
     PrimaryKey(nameof(ClientId), nameof(ProductVariantId)),
     Index(nameof(ClientId))]
-public class BasketPosition
+public sealed record BasketPosition
 {
     /// <summary>
     /// ID покупателя

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api.Template.Rest</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Template.Rest.Controllers.BasketController">
+            <summary>
+            Корзина
+            </summary>
+        </member>
+        <member name="M:Api.Template.Rest.Controllers.BasketController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Template.Rest.Controllers.BasketController},Api.Template.Interfaces.Services.IBasketSevice)">
+            <summary>
+            Корзина
+            </summary>
+        </member>
+        <member name="M:Api.Template.Rest.Controllers.BasketController.GetBasketByClient(Api.Template.Models.Input.GetBasketPositionsInput)">
+            <summary>
+            получить корзину клиента
+            </summary>
+        </member>
+    </members>
+</doc>

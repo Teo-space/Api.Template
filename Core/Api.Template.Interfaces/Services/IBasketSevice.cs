@@ -1,4 +1,4 @@
-﻿using Api.Template.Models.Output;
+﻿using Api.Template.Models.Output.Basket;
 
 namespace Api.Template.Interfaces.Services;
 
@@ -11,7 +11,4 @@ public interface IBasketSevice
     /// получить корзину клиента
     /// </summary>
     public Task<BasketModel> GetBasketByClient(Guid clientId);
-
-
-
 }

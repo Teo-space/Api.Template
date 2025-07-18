@@ -3,16 +3,9 @@ using Api.Template.Interfaces.DbContexts;
 
 namespace Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
 
-public class SampleDbContext : DbContext, ISampleDbContext
+public class SampleDbContext(DbContextOptions<SampleDbContext> options) : DbContext(options), ISampleDbContext
 {
     public DbSet<BasketPosition> BasketPositions { get; set; }
-
-
-
-    public SampleDbContext(DbContextOptions<SampleDbContext> options) : base(options)
-    {
-        Database.EnsureCreated();
-    }
 
 #if DEBUG
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
