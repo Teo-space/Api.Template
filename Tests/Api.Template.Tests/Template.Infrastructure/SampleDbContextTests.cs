@@ -1,5 +1,5 @@
 ﻿using Api.Template.Domain.Models.Basket;
-using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
+using Api.Template.Infrastructure.EntityFramework.DbContexts;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 

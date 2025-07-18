@@ -1,9 +1,8 @@
 ﻿using Api.Template.Domain.Models.Basket;
-using Api.Template.Interfaces.DbContexts;
 
-namespace Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
+namespace Api.Template.Infrastructure.EntityFramework.DbContexts;
 
-public class SampleDbContext(DbContextOptions<SampleDbContext> options) : DbContext(options), ISampleDbContext
+public class SampleDbContext(DbContextOptions<SampleDbContext> options) : DbContext(options)
 {
     public DbSet<BasketPosition> BasketPositions { get; set; }
 

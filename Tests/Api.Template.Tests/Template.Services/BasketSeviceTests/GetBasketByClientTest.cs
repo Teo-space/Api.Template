@@ -1,5 +1,6 @@
 ﻿using Api.Template.Domain.Models.Basket;
-using Api.Template.Infrastructure.EntityFrameworkCore.DbContexts;
+using Api.Template.Infrastructure.EntityFramework.DbContexts;
+using Api.Template.Infrastructure.Repositories;
 using Api.Template.Interfaces.Services;
 using Api.Template.Services.Implementation;
 using FluentAssertions;
@@ -34,7 +35,9 @@ public class GetBasketByClientTest
             dbContext.BasketPositions.Add(basketPosition);
             dbContext.SaveChanges();
         }
-        basketSevice = new BasketSevice(dbContext);
+
+
+        basketSevice = new BasketSevice(new BasketSeviceRepository(dbContext));
     }
 
     [TearDown]
